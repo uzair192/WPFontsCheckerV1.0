@@ -7,7 +7,7 @@ const dbConnection = async () => {
         useUnifiedTopology: true,
     }
     try {
-        mongoose.connect(process.env.MONGO_URI_DEV, mongoOptions, (err) => {
+        mongoose.connect(process.env.MONGO_URI, mongoOptions, (err) => {
             if (err) return console.log(err.message);
             console.log("DB connected successfully 100%");
         })
