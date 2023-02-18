@@ -29,7 +29,9 @@ router.post('/spider', (req, res, next) => {
     // VALIDATOR HELPER
     const Validator = new ValidatorHelper()
     const isValid = Validator.isValidURL(url);
-    console.log('URL PATTERN: ' + isValid);
+
+
+    // CHECK URL VALIDATION
     if (!isValid) {
         return res.status(400).json({ status: 400, message: "URL pattern invalid :(" });
     }
